@@ -149,12 +149,12 @@ button:hover{
     background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgb(18, 58, 20));
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:520px) {
     .footerImg{
-        width: 300px;
+        width: 90%;
     }
     .mainImg{
-        width: 300px;
+        width: 90%;
     }
     .container{
         min-width: 357px;
