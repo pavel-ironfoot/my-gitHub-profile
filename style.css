@@ -128,10 +128,10 @@ img{
     border-radius: 10px;
 }
 .mainImg{
-    width: 350px;
+    width: 460px;
 }
 .footerImg{
-    width: 350px;
+    width: 460px;
 }
 a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -147,4 +147,16 @@ button:hover{
     font-size: 16px;
     color: rgb(1, 163, 1);
     background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgb(18, 58, 20));
+}
+
+@media screen and (max-width:375px) {
+    .footerImg{
+        width: 300px;
+    }
+    .mainImg{
+        width: 300px;
+    }
+    .container{
+        min-width: 357px;
+    }
 }
