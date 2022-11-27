@@ -22,7 +22,7 @@ const getUserMe = async (url) => {
                                 <div class="preloaderRepo preloaderRepo${i}"></div>
                                 <a target="_blank" href="https://pavel-ironfoot.github.io/${dataIn[i].name}/">visit site(gh-pages)</a>                          
                                 </div>`;    
-                                console.log(dataIn[i].branches_url.replace('{/branch}','/main'));  
+                                // console.log(dataIn[i].branches_url.replace('{/branch}','/main'));  
     
                     }
                     showMyRepos(myReposHtml);
@@ -34,9 +34,9 @@ const getUserMe = async (url) => {
                             const response = await fetch(url);
                             if(response.ok){
                                 let data = await response.json();
-                                console.log(data);
+                                // console.log(data);
                                 arrDataRepos[i] = await data.commit.commit.author.date;
-                                console.log(arrDataRepos[i]);
+                                // console.log(arrDataRepos[i]);
                                 document.querySelector(`.repo${i}`).addEventListener('click',()=>{ 
                                     if(document.querySelector(`.repo${i}`).textContent==='click to show date'){
                                         showPreloaderRepo('please, wait...',document.querySelector(`.preloaderRepo${i}`));
@@ -51,7 +51,7 @@ const getUserMe = async (url) => {
                             }
     
                         }
-                        console.log(dataIn[i].branches_url.replace('{/branch}','/main'));
+                        // console.log(dataIn[i].branches_url.replace('{/branch}','/main'));
                         showMyReposData(dataIn[i].branches_url.replace('{/branch}','/main'));
                     }
     
@@ -65,7 +65,7 @@ const getUserMe = async (url) => {
             myRepos(data.repos_url);
         }else{
             mainMe.innerHTML = '<p>sorry, you are not Neo...</p>';
-            console.log('fuck!');
+            // console.log('fuck!');
         }
 
     }catch(error){
