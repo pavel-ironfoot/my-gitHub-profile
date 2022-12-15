@@ -1,8 +1,8 @@
 const preloader = document.querySelector('.preloader');
-const preloaderText1 = document.querySelector('.preloaderText1');
-const preloaderText2 = document.querySelector('.preloaderText2');
-const preloaderText3 = document.querySelector('.preloaderText3');
-const preloaderText4 = document.querySelector('.preloaderText4');
+const preloaderText1 = document.querySelector('.preloader-text-1');
+const preloaderText2 = document.querySelector('.preloader-text-2');
+const preloaderText3 = document.querySelector('.preloader-text-3');
+const preloaderText4 = document.querySelector('.preloader-text-4');
 const whiteRabbit = document.querySelector('.img-rabbit');
 
 const str1 = 'Wake up, Neo...';

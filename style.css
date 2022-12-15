@@ -27,7 +27,7 @@ body{
     margin: 5px;
     border-bottom: 2px solid green; 
 }
-.myReposElem{
+.my-repos-elem{
     background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgb(18, 58, 20));
     margin: 5px;
     padding: 5px;
@@ -36,7 +36,7 @@ body{
     position: relative;
     color: rgb(1, 163, 1);
 }
-.mainMe>p{
+.main-me>p{
     padding: 5px;
     background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgb(18, 58, 20));
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,7 +53,7 @@ body{
     top: 0px;
     left: 0px;
 }
-.preloaderText{
+.preloader-text{
     font-family:'Franklin Gothic Medium';
     font-size: 16px;
     color: rgb(0, 116, 10);
@@ -70,13 +70,13 @@ body{
     animation-iteration-count: infinite;
 
 }
-/* ////////////////////////////////////////////////// */
-.repoShowCommit{
+
+.repo-show-commit{
     border: 1px solid black;
     padding: 5px;
     width: fit-content;
 }
-.preloaderRepo{
+.preloader-repo{
     position: absolute;
     width: 160px;
     height: 30px;
@@ -95,7 +95,7 @@ body{
     margin: 5px;
     color: rgb(1, 163, 1);
 }
-.footerRepo>div{
+.footer-repo>div{
     padding: 5px;
     background-image: linear-gradient(to bottom,rgb(0, 0, 0),rgb(18, 58, 20));
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -134,10 +134,10 @@ button, input{
 img{
     border-radius: 10px;
 }
-.mainImg{
+.main-img{
     width: 460px;
 }
-.footerImg{
+.footer-img{
     width: 460px;
 }
 a{
@@ -190,10 +190,10 @@ button:hover{
     }
 }
 @media screen and (max-width:520px) {
-    .footerImg{
+    .footer-img{
         width: 90%;
     }
-    .mainImg{
+    .main-img{
         width: 90%;
     }
     .container{
