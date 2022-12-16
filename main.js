@@ -68,7 +68,7 @@ getUserMe(MY_PROFILE_URL);
 
 function createMyProfile(data){
     mainMe.innerHTML = `
-        <img class="mainImg" src="${data.avatar_url}">
+        <img class="main-img" src="${data.avatar_url}">
         <p>${data.name}</p>
         <p>${data.login}</p>
         <p>${data.bio}</p>
