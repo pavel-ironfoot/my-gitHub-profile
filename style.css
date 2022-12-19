@@ -201,3 +201,9 @@ button:hover{
         min-width: 300px;
     }
 }
+.my-repos-elem-name{
+    color:beige;
+}
+.my-repos-elem>a{
+    color: rgb(100, 232, 241);
+}

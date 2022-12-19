@@ -28,7 +28,7 @@ const getAndShowMyRepos = async (url) => {
         let myReposHtml ='';
         for(let i=0;i<dataIn.length;i++){
             myReposHtml = myReposHtml + `<div class="my-repos-elem">
-                    <p>repository name: ${dataIn[i].name}</p>
+                    <p class='my-repos-elem-name'>repository name: ${dataIn[i].name}</p>
                     <p>branch: ${dataIn[i].default_branch}</p>
                     <div class="repo-show-commit repo${i}">click to show date</div>
                     <div class="preloader-repo preloader-repo${i}"></div>
