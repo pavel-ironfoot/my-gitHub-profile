@@ -5,35 +5,24 @@ const footerProfile = document.querySelector('.profiles');
 const element = document.querySelector('.prof');
 const footerRepo = document.querySelector('.footer-repo');
 
+const getUsersRepo = async (url) => {
+    const response = await fetch(url);
+        let dataIn = await response.json();                   
+        for (let i = 0; i < dataIn.length; i++) {
+            let repoElement = document.createElement('div');
+            repoElement.innerHTML = dataIn[i].name;
+            footerRepo.appendChild(repoElement);
+        }
+}  
 const searchProfile = async (e) => {
     e.preventDefault();
     let userNick = inputSearch.value;
-    console.log(userNick);
     try{
         const response = await fetch(`https://api.github.com/users/${userNick}`);
         if (response.ok) {
             let data = await response.json();
-            console.log(data.repos_url);
             createElementProfile(data);
-            const getUsersRepo = async (url) => {
-                const response = await fetch(url);
-                if (response.ok) {
-                    let dataIn = await response.json();
-                    console.log(dataIn);
-                    console.log(dataIn.length);
-                    
-                    for (let i = 0; i < dataIn.length; i++) {
-                        let repoElement = document.createElement('div');
-                        repoElement.innerHTML = dataIn[i].name;
-                        footerRepo.appendChild(repoElement);
-                    }
-    
-                } else {
-                    console.error('error repo!!!!!!!!!!', response.status);
-                }
-            }   
-            document.querySelector('.js-show-repo').addEventListener('click', () => {
-                    
+            document.querySelector('.js-show-repo').addEventListener('click', () => {                  
                     if(footerRepo.textContent!==''){
                         footerRepo.innerHTML=''
                     }else{
@@ -42,11 +31,9 @@ const searchProfile = async (e) => {
             });    
         } else {
             element.innerHTML = '<p>sorry, guest</p><p>unknown userName<p>';
-            console.error('error!!!!!!!!!!', response.status);
         }   
         form.reset();
     }catch(error){
-        console.log('footer error is: ',error);
         footerProfile.innerHTML = `<p>again you, agent Smith ...</p>`
     }
 }
